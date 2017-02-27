@@ -21,7 +21,12 @@
 		margin-top: 21px;
 		float: left;
 		color: #E06D20;
-		padding-bottom: 12px;
+		padding-bottom: 16px;
 		margin-bottom: 0;
+
+		&.selected{
+			border-bottom: 4px solid #E06D20;
+			padding-bottom: 12px;
+		}
 	}
 }
