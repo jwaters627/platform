@@ -1,0 +1,31 @@
+
+
+body{
+  margin:0;
+  padding: 0;
+}
+
+.headContainer{
+  width: 100%;
+  box-shadow: 0 4px 2px -2px gray;
+  height: 48px;
+  background-color: white;
+  position: relative;
+  z-index: 99999;
+
+  &.helio{
+    background-color: black;
+    box-shadow: none;
+  }
+}
+
+.burger{
+  height: 24px;
+  margin-left: 16px;
+  margin-top: 12px;
+  float: left;
+}
+
+#burger:hover{
+  cursor: pointer;
+}

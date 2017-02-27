@@ -1,0 +1,25 @@
+.suggestedSearchesContainer{
+	width: 100%;
+	height: 200px;
+	display: inline;
+}
+
+.contentContainer{
+	width: 89.4%;
+	margin-left: 5%;
+	margin-bottom: 20px;
+	margin-top: 52px;
+		&:before {
+			content: '';
+			display: block;
+			border: 2px solid #E06D20;
+			width: 32px;
+		}
+
+	h3{
+		font-family: CHOpenSans;
+		font-weight: 400;
+		padding-top: 10px;
+		margin-bottom: 0;
+	}
+}

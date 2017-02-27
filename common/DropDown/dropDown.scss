@@ -1,0 +1,55 @@
+.dropDownContainer{
+	display: inline-block;
+	padding: 10px;
+	position: relative;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+.dropDownText{
+	margin: 0;
+	display: inline-block;
+	font-family: CHOpenSans;
+	float: left;
+	font-size: 14px;
+}
+
+.dropDownListContainer{
+	position: absolute;
+	box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.6);
+	top: -8px;
+	left: 0;
+	margin-top: 0;
+	height: 260px;
+	width: 212px;
+	overflow: scroll;
+	background-color: #fff;
+	z-index: 10;
+
+	.dropDownItemsText{
+		font-family: CHOpenSans;
+		font-size: 14px;
+		margin: 0;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		padding-left: 8px;
+		padding-right: 0;
+		cursor: pointer;
+		font-weight: 100;
+
+		&:hover{
+			background-color: #C9CED1;
+		}
+
+		&.top{
+			display: inline-block;
+			float: left;
+			margin-top: 0;
+			padding-top: 0;
+
+			&:hover{
+				background-color: #fff;
+			}
+		}
+	}
+}

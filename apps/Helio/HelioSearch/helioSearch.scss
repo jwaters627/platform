@@ -1,0 +1,38 @@
+.searchArea{
+	height: 456px;
+	width:100%;
+	background-image: url('../../../common/img/helioLanding.png');
+	background-size: cover;
+	background-color: black;
+	background-position: -3px -2px;
+}
+
+.insightsHeader{
+	color: #fff;
+	display: inline-block;
+	margin-top: 144px;
+	margin-left: 110px;
+	font-size: 48px;
+	font-family: CHOpenSans;
+	font-weight: normal;
+
+}
+
+
+.searchBox{
+
+	margin-left: 110px;
+
+	.searchInput{
+		resize: none;
+		display: inline-block;
+		color:white;
+		background-color: rgba(255,255,255,.15);
+		width: 57%;
+		border: none;
+		font-size: 34px;
+		outline: none;
+		font-family: CHOpenSans;
+		font-weight: 100;
+	}
+}

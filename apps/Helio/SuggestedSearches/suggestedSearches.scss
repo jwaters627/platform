@@ -1,0 +1,47 @@
+.suggestedSearchesContainer{
+	width: 100%;
+	height: 200px;
+	display: inline;
+}
+
+.contentContainer{
+	width: 89.4%;
+	margin-left: 5%;
+	margin-top: 40px;
+		&:before {
+			content: '';
+			display: block;
+			border: 2px solid #E06D20;
+			width: 32px;
+		}
+
+	h3{
+		font-family: CHOpenSans;
+		font-weight: 400;
+		padding-top: 10px;
+	}
+
+	.suggestedSearch{
+		height: 96px;
+		width: 268px;
+		box-shadow: 1px 1px 1px 1px grey;
+		display: inline-block;
+		margin-left: 25px;
+		margin-right: 25px;
+
+		.searchName{
+			font-family: CHOpenSans;
+			margin-left: 25px;
+			font-size: 16px;
+			margin-bottom: 0;
+		}
+
+		.searchTitle{
+			font-family: CHOpenSans;
+			margin-left: 25px;
+			font-size: 16px;
+			font-weight: 100;
+			display: inline-block;
+		}
+	}
+}
