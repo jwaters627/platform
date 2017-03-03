@@ -40,7 +40,6 @@ class HelioSight extends React.Component {
     }
 
     searchEnter(e){
-    	console.log(e.key)
     	if(e.key == 'Enter'){
     		this.setState({rendering: 'results'})
 		}

@@ -20,34 +20,23 @@ class ResultsSection extends React.Component {
             ],
         }
         this.renderSections = this.renderSections.bind(this);
-        this.hideSection = this.hideSection.bind(this);
     }
 
     renderSections(item){
-    	let shown = 'block';
-    	let carat = <DownCarat onClick={ () => { this.hideSection( item )}} style={{'display': 'inline-block', 'float': 'right', 'marginTop': '20px', 'cursor': 'pointer'}}/>
-    	if(item.collapsed === true){
-    		shown = 'none'
-    		carat = (<UpCarat onClick={ () => { this.hideSection( item )}} style={{'display': 'inline-block', 'float': 'right', 'marginTop': '20px', 'cursor': 'pointer'}}/>)
-    	}
+    	
     	return(
-        		<div className='suggestedSearchesContainer'>
+        		<div className='suggestedSearchesContainer' key={item.id}>
                     <Element name={item.name} className='element'>
     		    	<div className='contentContainer'>
     			   		<h3 style={{'fontSize': '44px', 'display': 'inline-block', 'marginTop': '0px'}}>{item.title}</h3>
-    			   		{carat}
-    			   		<img src={item.image} style={{'width': '100%', 'display': shown, 'marginTop': '32px'}}/>
+    			   		<img src={item.image} style={{'width': '100%', 'display': 'block', 'marginTop': '32px'}}/>
     				</div>
                     </Element>
     			</div>
 		)
     }
 
-    hideSection(item){
-    	item.collapsed = !item.collapsed
-    	this.setState({sections: this.state.sections})
-    }
-
+    
 	render(){
 		return(
 			<div>

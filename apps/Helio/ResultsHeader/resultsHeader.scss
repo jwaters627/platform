@@ -7,5 +7,114 @@
 
 	.searchBox{
 		padding-top: 40px;
+
+		.searchInput{
+			width: 40%;
+			float: left;
+		}
+	}
+
+	.savedSearchInfoBox {
+	    position: relative;
+	    margin: 45px -52px;
+	    padding: 18px 20px;
+	    background-color: #fff;
+	    width: 448px;
+	    z-index: 100;
+	    box-shadow: 1px 15px 22px 8px rgba(30,30,30,0.3);
+
+	    &::after{
+	    content: '';
+	    position: absolute;
+	    top: -10px;
+	    left: 20px;
+	    margin: 0;
+	    border-top: 0;
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	    border-bottom: 10px solid #fff;
+	    padding: 0;
+	    width: 0;
+	    height: 0;
+	    }
+	}
+
+	.saveSearchHeading{
+		font-family: CHOpenSans;
+		font-size: 24px;
+	}
+
+	.searchNameLabel{
+		font-family: CHOpenSans;
+		font-size: 16px;
+		display: inline-block;
+	}
+
+	.savedSearchInput{
+		resize: none;
+		display: inline-block;
+		color: #000;
+		background-color: #fff;
+		width: 72%;
+		border:none; 
+		border-bottom: 2px solid #E06D20;
+		font-size: 16px;
+		margin-left: 26px;
+		outline: none;
+		font-family: CHOpenSans;
+	}
+
+	.saveSearchInfoText{
+		font-family: CHOpenSans;
+		font-size: 14px;
+		font-weight: 100;
+	}
+
+	.cancelButton{
+		display: inline-block;
+		padding: 8px;
+		padding-left: 25px;
+		padding-right: 25px;
+		float: right;
+		font-family: CHOpenSans;
+		font-weight: 100;
+		margin: 0;
+		cursor: pointer;
+	}
+
+	.saveButton{
+		display: inline-block;
+		padding: 10px;
+		padding-left: 25px;
+		padding-right: 25px;
+		background-color: #E06D20;
+		color: #fff;
+		float: right;
+		font-family: CHOpenSans;
+		font-weight: 100;
+		 box-shadow: 1px 2px 6px 1px rgba(30,30,30,0.3);
+		 margin: 0;
+		 cursor: pointer;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

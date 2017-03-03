@@ -9,7 +9,7 @@ class TeamSelect extends React.Component{
     if(team.selected == true){return}
       else{
     return(
-        <h4 className="teamList" onClick={(event)=>this.props.teamClickUpdate(team.key)}>{team.name}</h4>
+        <h4 key={team.key} className="teamList" onClick={(event)=>this.props.teamClickUpdate(team.key)}>{team.name}</h4>
       )
     }
   }

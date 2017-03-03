@@ -1,0 +1,37 @@
+.shareContainer{
+	display: inline-block;
+	float: right;
+	right: 82px;
+	bottom: 68px;
+	width: 60px;
+	position: relative;
+
+	>div{
+		visibility: hidden;
+		position: absolute;
+		bottom: 55px;
+		padding-bottom: 47px;
+	}
+
+	&:hover{
+		>div{
+			visibility: visible;
+		}
+	}
+
+	.below{
+		top: 0;
+		margin-top: 50px;
+
+	}	
+}
+
+.snack{
+		div{
+			div{
+				span{
+					color: #fff;
+				}
+			}
+		}
+	}

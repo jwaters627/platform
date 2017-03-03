@@ -14,9 +14,8 @@ class FilterBar extends React.Component {
         this.state = {     
         }   
     }
-    
+
 	render(){
-		console.log(this.props.testing)
 		return(
 			<div className='filterBar'>
 			    <DropDown arrowColor='#fff' margin='8px 0px 0px 70px' textColor='#fff' items={this.props.filters.date}/>

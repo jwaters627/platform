@@ -12,7 +12,7 @@ class ProductSelect extends React.Component{
     if(product.selected == true){return}
       else{
     return(
-        <h4 className="productList" onClick={(event)=>this.props.productClickUpdate(product.key)}>{product.name}</h4>
+        <h4 key={product.key} className="productList" onClick={(event)=>this.props.productClickUpdate(product.key)}>{product.name}</h4>
       )
   }
   }

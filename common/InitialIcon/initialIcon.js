@@ -10,7 +10,7 @@ class InitialIcon extends React.Component{
     if(team.selected == true){return}
       else{
     return(
-        <h4 className="teamListSettings" onClick={(event)=>this.props.teamInSettingsClickUpdate(team.key)}>{team.name}</h4>
+        <h4 key={team.key} className="teamListSettings" onClick={(event)=>this.props.teamInSettingsClickUpdate(team.key)}>{team.name}</h4>
       )
     }
   }

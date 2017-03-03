@@ -5,28 +5,30 @@
 	margin-bottom: 40px;
 	background-color: #fff;
 	box-shadow: 1px 1px 3px rgba(30,30, 30, 0.8);
-}
 
-.sourceContainer{
-	display: inline-block;
-	cursor: pointer;
-	background-color: #fff;
 
-	.sourceTitle{
+	.sourceContainer{
 		display: inline-block;
-		color: #fff;
-		font-family: CHOpenSans;
-		font-size: 14px;
-		margin-left: 80px;
-		margin-top: 21px;
-		float: left;
-		color: #E06D20;
-		padding-bottom: 16px;
-		margin-bottom: 0;
+		cursor: pointer;
+		background-color: #fff;
 
-		&.selected{
-			border-bottom: 4px solid #E06D20;
-			padding-bottom: 12px;
+		.sourceTitle{
+			display: inline-block;
+			color: #fff;
+			font-family: CHOpenSans;
+			font-size: 14px;
+			margin-left: 80px;
+			margin-top: 21px;
+			float: left;
+			color: #E06D20;
+			padding-bottom: 16px;
+			margin-bottom: 0;
+
+			&.selected{
+				border-bottom: 4px solid #E06D20;
+				padding-bottom: 12px;
+			}
 		}
 	}
 }
+

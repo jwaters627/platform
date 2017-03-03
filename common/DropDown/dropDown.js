@@ -30,7 +30,7 @@ class DropDown extends React.Component {
         if(item.selected || item.text.toLowerCase().includes(this.state.value.toLowerCase()) == false){return}
        	else{
 	    	return(
-	    		<p className='dropDownItemsText' onClick={ ( e ) => {this.handleSelect(item)}}>{item.text}</p>
+	    		<p key={item.id} className='dropDownItemsText' onClick={ ( e ) => {this.handleSelect(item)}}>{item.text}</p>
 			)
     	}
     }
