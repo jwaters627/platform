@@ -7,25 +7,26 @@ module.exports = {
 	module: {
 		loaders: [
 		{
-			test: /.js?$/,
-			loader: 'babel-loader',
-			exclude: /node-modules/,
-			query: {
-				presets: ['es2015', 'react', 'stage-0']
-			}
+			test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader?presets[]=es2015&presets[]=react&presets[]=stage-0&plugins[]=transform-decorators-legacy&plugins[]=transform-runtime'
 		},
+    {
+      test: /\.css$/,
+      loader: "style-loader!css-loader"
+    },
     {
       test: /\.scss$/,
       loader: 'style-loader!css-loader!sass-loader'
     },
-     {
-        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
-        loader: 'file-loader'
+      {
+          test: /\.(eot|ttf|woff|woff2)$/,
+          loader: 'file-loader?name=/fonts/[name].[ext]'
       },
       {
           test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
           loaders: [
-            'url-loader?limit=10000&mimetype=image/svg+xml'
+            'file-loader?name=dist/img/[name].[ext]'
           ]}]
 	}
 };

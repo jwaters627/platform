@@ -1,12 +1,23 @@
 
 #drawer{
 
-	position: absolute;
+	position: fixed;
 	height: 100%;
 	width: 200px;
 	box-shadow : 1px 0px 3px 1px #ccc;
-	z-index: 999;
+	z-index: 99999;
+	top:0;
 	background-color: white;
+
+	.productHeading{
+		height: 44px;
+
+		.productText{
+			color: white;
+			padding-top: 8px;
+			margin-left: 10px;
+		}
+	}
 }
 
 .drawerLinks{
@@ -26,6 +37,7 @@
 
 #help{
 	border-top: 1px solid gray;
+
 }
 
 .linkContainer{

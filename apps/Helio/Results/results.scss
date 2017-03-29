@@ -7,7 +7,6 @@
 }
 
 .learnMoreText{
-	float: right;
 	font-family: CHOpenSans;
 	font-size: 13px;
 	display: inline-block;
@@ -15,4 +14,6 @@
 	text-decoration: underline;
 	margin-right: 82px;
 	cursor: pointer;
+	position: absolute;
+	right: 0;
 }

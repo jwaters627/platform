@@ -18,19 +18,19 @@ class FilterBar extends React.Component {
 
     renderSections = (item) => {
     	return (
-    		<div className="sourceContainer">
-				<Link className="sourceTitle" activeClass="selected" to={item.name} offset={-100} spy={true} smooth={false} duration={500} >{item.text}</Link>
+    		<div className="linkContainer">
+				<Link className="sourceTitle" activeClass="selected" to={item.name} offset={-80} spy={true} smooth={true} duration={500} >{item.text}</Link>
 			</div>
     	)
     }
 
 	render(){
 		return(
-				<Sticky>
+				<Sticky topOffset={0} style={{'height': '110px', 'zIndex': '100'}} >
 					<div className='sourceBar'>
 						{this.state.sections.map(this.renderSections)}
 				 	</div>
-				 	<Fab />
+				 	<Fab handleShowSnackBar={this.props.handleShowSnackBar}/>
 			  	</Sticky>
 		)
 	}

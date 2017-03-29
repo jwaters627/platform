@@ -1,16 +1,16 @@
 .sourceBar{
 	width: 100%;
-	height: 56px;
 	margin-top: -2px;
 	margin-bottom: 40px;
 	background-color: #fff;
 	box-shadow: 1px 1px 3px rgba(30,30, 30, 0.8);
 
 
-	.sourceContainer{
+	.linkContainer{
 		display: inline-block;
 		cursor: pointer;
 		background-color: #fff;
+		padding-bottom: 3px;
 
 		.sourceTitle{
 			display: inline-block;
@@ -18,7 +18,7 @@
 			font-family: CHOpenSans;
 			font-size: 14px;
 			margin-left: 80px;
-			margin-top: 21px;
+			margin-top: 16px;
 			float: left;
 			color: #E06D20;
 			padding-bottom: 16px;

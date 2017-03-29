@@ -20,18 +20,19 @@ class TeamSelect extends React.Component{
     let productClass = classNames(
             'product',
             {
-                "helio": (this.props.product == 'HelioSight'),
+                "helio": (this.props.product == 'HelioSight' && this.props.teamContainer !== 'teamSelectContainerOpen'),
+                "forsight": (this.props.product == 'ForSight' && this.props.teamContainer !== 'teamSelectContainerOpen'),
             }
         );
 
     let arrowColor = '#000';
-    if(this.props.product == 'HelioSight'){
+    if((this.props.product == 'HelioSight' || this.props.product == 'ForSight') && this.props.teamContainer !== 'teamSelectContainerOpen'){
       arrowColor='#fff';
     }    
 
     return(
       <div id={this.props.teamContainer} onClick={this.props.handleTeamClick}>
-      	<DownArrow id="teamArrow" style={{color: arrowColor}} />
+      	<DownArrow id="teamArrow" style={{color: arrowColor, 'width': '40px', 'height': '26px'}} />
       	<h4 className={productClass} >{this.props.team}</h4>
         <hr id={this.props.showTeams}/>
       	<div id={this.props.showTeams}>

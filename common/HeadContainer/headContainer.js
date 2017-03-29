@@ -3,13 +3,14 @@
 import React from 'react';
 
 import styles from './headContainer.scss';
-import burger from '../img/Menu.svg';
-import logo from '../img/crimson_logo.png';
+import burger from '../../dist/img/Menu.svg';
 import ProductSelect from '../ProductSelect/productSelect.js';
 import TeamSelect from '../TeamSelect/teamSelect.js';
 import InitialIcon from '../InitialIcon/initialIcon.js';
 import classNames from 'classnames';
 import Burger from 'react-material-icons/icons/navigation/menu';
+import logo from '../../dist/img/crimson_logo.png';
+import whiteLogo from '../../dist/img/crimson_logo_white.svg';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
@@ -31,24 +32,31 @@ class HeadContainer extends React.Component{
         }
     }
   render(){
-    console.log(this.props.product == 'HelioSight')
+    
     let productClass = classNames(
             'headContainer',
             {
                 "helio": (this.props.product == 'HelioSight'),
+                "forsight": (this.props.product == 'ForSight')
             }
         );
 
     let burgerColor = '#000';
-    if(this.props.product == 'HelioSight'){
+    if(this.props.product.toLowerCase() == 'heliosight' || this.props.product.toLowerCase() == 'forsight'){
       burgerColor='#fff';
     }    
+
+    let renderLogo = logo;
+    if(this.props.product.toLowerCase() == 'heliosight' || this.props.product.toLowerCase() == 'forsight'){
+      renderLogo = whiteLogo;
+  }
 
                 
           
     return(
       <div className={productClass}>
-        <Burger onClick={this.props.handleBurgerClick} style={{color: burgerColor}} className='burger'/>
+        <Burger onClick={this.props.handleBurgerClick} style={{color: burgerColor, 'cursor': 'pointer'}} className='burger'/>
+        <img id="logo" src={renderLogo} />
         <ProductSelect 
           product={this.props.product} 
           handleProductClick={this.props.handleProductClick} 

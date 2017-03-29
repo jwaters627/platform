@@ -4,6 +4,9 @@ import Search from 'react-material-icons/icons/action/search';
 import Ellipsis from 'react-material-icons/icons/navigation/more-vert';
 import styles from './suggestedSearches.scss';
 
+
+const savedSearch = require('../../../dist/img/savedSearchScreenShot.png');
+
 class suggestedSearches extends React.Component {
 	render(){
 		return(
@@ -33,7 +36,7 @@ class suggestedSearches extends React.Component {
 			   </div>
 			   <div className='contentContainer'>
 			   		<h3 style={{'marginBottom': '40px'}}>Saved Searches</h3>
-			   		<img src='../../../common/img/savedSearchScreenShot.png'/>
+			   		<img src={savedSearch}/>
 			   </div>
 
 		  	</div>

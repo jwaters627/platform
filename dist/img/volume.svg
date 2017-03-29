@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="78px" height="55px" viewBox="0 0 78 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>chart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="New-Report---Charts-and-Sources---Heavy-Beer-Selected" transform="translate(-313.000000, -181.000000)">
+            <g id="monitor-sources-and-charts" transform="translate(0.000000, 117.000000)">
+                <g id="components" transform="translate(286.000000, 43.000000)">
+                    <g id="volume---line-selected" transform="translate(9.000000, 0.000000)">
+                        <g id="chart" transform="translate(17.000000, 22.000000)">
+                            <path d="M78.8204262,52.0716591 C67.1238807,52.0716591 71.0722084,15.1195446 64.3178652,15.1195446 C57.563522,15.1195446 56.0066349,40.1829284 44.8043096,40.1829284 C33.6019843,40.1829284 32.35829,0 26.5923873,0 C20.8264846,0 20.1069424,51.0059306 15,51.0059306" id="Path-3-Copy" stroke="#FFFFFF" stroke-width="2"></path>
+                            <text id="1k" font-family="OpenSans, Open Sans" font-size="8" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="0.2265625" y="29">1k</tspan>
+                                <tspan x="9" y="40"></tspan>
+                                <tspan x="4.42578125" y="51">0</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -17,6 +17,11 @@ body{
     background-color: black;
     box-shadow: none;
   }
+
+  &.forsight{
+    background-color: #3d5467;
+    box-shadow: none;
+  }
 }
 
 .burger{
@@ -25,6 +30,19 @@ body{
   margin-top: 12px;
   float: left;
 }
+
+
+#logo{
+  height: 24px;
+  margin-left: 20px;
+  margin-top: 12px;
+  float: left;
+}
+
+#logo:hover{
+  cursor: pointer;
+}
+
 
 #burger:hover{
   cursor: pointer;

@@ -4,8 +4,8 @@ import HeadContainer from '../HeadContainer/headContainer';
 import Drawer from '../Drawer/drawer';
 import { hashHistory } from 'react-router';
 
-import dropup from '../img/arrow_dropup.svg';
-import dropdown from '../img/arrow_dropdown.svg';
+import dropup from '../../dist/img/arrow_dropup.svg';
+import dropdown from '../../dist/img/arrow_dropdown.svg';
 
 import products from '../../stores/products';
 import teams from '../../stores/teams';
@@ -16,7 +16,21 @@ import fonts from '../fonts.scss';
 class Main extends React.Component {
   constructor(props) {
     super(props);
-	this.state = {product: 'Forsight', listedProducts: products, team: 'Team A', listedTeams: teams, open: 'drawerClosed', productArrow: dropdown, teamArrow: dropdown, showProducts: 'otherProductsHide', showTeams: 'otherTeamsHide', showTeamsSettings: 'teamListInSettingsHide', productContainer: 'productSelectContainer', teamContainer: 'teamSelectContainer', showProfile: 'profileHidden' };
+	this.state = {
+      product: 'ForSight', 
+      listedProducts: products, 
+      team: 'Team A', 
+      listedTeams: teams, 
+      open: 'drawerClosed', 
+      productArrow: dropdown, 
+      teamArrow: dropdown, 
+      showProducts: 'otherProductsHide', 
+      showTeams: 'otherTeamsHide', 
+      showTeamsSettings: 'teamListInSettingsHide', 
+      productContainer: 'productSelectContainer', 
+      teamContainer: 'teamSelectContainer', 
+      showProfile: 'profileHidden' 
+    };
 	this.handleBurgerClick = this.handleBurgerClick.bind(this);
   this.handleProductClick = this.handleProductClick.bind(this);
   this.handleTeamClick = this.handleTeamClick.bind(this);
@@ -28,44 +42,54 @@ class Main extends React.Component {
   this.handleTeamInSettingsClick = this.handleTeamInSettingsClick.bind(this);
   }
 
+  componentDidMount() {
+      let setProduct = location.hash.slice(2)
+      this.setState({product: setProduct})
+  };
+
   handleBurgerClick(){
   	if(this.state.open === 'drawerClosed'){
-  		this.setState({open: 'drawerOpen'})
-      this.setState({productArrow: dropdown})
-      this.setState({showProducts: 'otherProductsHide'})
-      this.setState({productContainer: 'productSelectContainer'})
-      this.setState({teamContainer: 'teamSelectContainer'})
-      this.setState({teamArrow: dropdown})
-      this.setState({showTeams: 'otherTeamsHide'})
-      this.setState({showProfile: 'profileHidden'})
-      this.setState({showTeamsSettings: 'teamListInSettingsHide'})
+  		this.setState({
+        open: 'drawerOpen',
+        productArrow: dropdown,
+        showProducts: 'otherProductsHide',
+        productContainer: 'productSelectContainer',
+        teamContainer: 'teamSelectContainer',
+        teamArrow: dropdown,
+        showTeams: 'otherTeamsHide',
+        showProfile: 'profileHidden',
+        showTeamsSettings: 'teamListInSettingsHide'
+      })
   	}
   	else{this.setState({open: 'drawerClosed'})}
   }
 
   handleProductClick(){
     if(this.state.productArrow == dropdown){
-      this.setState({productArrow: dropup})
-      this.setState({showProducts: 'otherProducts'})
-      this.setState({productContainer: 'productSelectContainerOpen'})
-      this.setState({open: 'drawerClosed'})
-      this.setState({teamContainer: 'teamSelectContainer'})
-      this.setState({teamArrow: dropdown})
-      this.setState({showTeams: 'otherTeamsHide'})
-      this.setState({showProfile: 'profileHidden'})
-      this.setState({showTeamsSettings: 'teamListInSettingsHide'})
+      this.setState({
+        productArrow: dropup,
+        showProducts: 'otherProducts',
+        productContainer: 'productSelectContainerOpen',
+        open: 'drawerClosed',
+        teamContainer: 'teamSelectContainer',
+        teamArrow: dropdown,
+        showTeams: 'otherTeamsHide',
+        showProfile: 'profileHidden',
+        showTeamsSettings: 'teamListInSettingsHide'
+      })
     }
     else{
-      this.setState({productArrow: dropdown})
-      this.setState({showProducts: 'otherProductsHide'})
-      this.setState({productContainer: 'productSelectContainer'})
+      this.setState({
+        productArrow: dropdown,
+        showProducts: 'otherProductsHide',
+        productContainer: 'productSelectContainer'
+      })
     }
   }
 
   productClickUpdate( item ){
     for(var i=0; i < this.state.listedProducts.length; i++){
       if(this.state.listedProducts[i].key == item){
-        console.log(this.state.listedProducts[i])
         hashHistory.push('/'+this.state.listedProducts[i].name);
         this.state.listedProducts[i].selected = true
         this.setState({product: this.state.listedProducts[i].name})
@@ -77,21 +101,20 @@ class Main extends React.Component {
 
   handleTeamClick(){
     if(this.state.teamArrow == dropdown){
-      this.setState({teamArrow: dropup})
-      this.setState({showTeams: 'otherTeams'})
-      this.setState({teamContainer: 'teamSelectContainerOpen'})
-      this.setState({open: 'drawerClosed'})
-      this.setState({showProfile: 'profileHidden'})
-      this.setState({productArrow: dropdown})
-      this.setState({showProducts: 'otherProductsHide'})
-      this.setState({productContainer: 'productSelectContainer'})
+      this.setState({
+        teamArrow: dropup,
+        showTeams: 'otherTeams',
+        teamContainer: 'teamSelectContainerOpen',
+        open: 'drawerClosed',
+        showProfile: 'profileHidden',
+        productArrow: dropdown,
+        showProducts: 'otherProductsHide',
+        productContainer: 'productSelectContainer'
+      })
     }
     else{
-      this.setState({teamArrow: dropdown})
-      this.setState({showTeams: 'otherTeamsHide'})
-      this.setState({teamContainer: 'teamSelectContainer'})
-
-    }
+      this.setState({teamArrow: dropdown, showTeams: 'otherTeamsHide', teamContainer: 'teamSelectContainer'})
+     }
   }
 
   handleTeamInSettingsClick(){
@@ -121,19 +144,19 @@ class Main extends React.Component {
     }
   }
 
-
   handleInitialsClick(){
     if(this.state.showProfile == 'profileHidden'){
-      this.setState({showProfile: 'profile'})
-      this.setState({teamArrow: dropdown})
-      this.setState({showTeams: 'otherTeamsHide'})
-      this.setState({teamContainer: 'teamSelectContainer'})
-      this.setState({open: 'drawerClosed'})
-      this.setState({productArrow: dropdown})
-      this.setState({showProducts: 'otherProductsHide'})
-      this.setState({productContainer: 'productSelectContainer'})
-      this.setState({showTeamsSettings: 'teamListInSettingsHide'})
-
+      this.setState({
+        showProfile: 'profile',
+        teamArrow: dropdown,
+        showTeams: 'otherTeamsHide',
+        teamContainer: 'teamSelectContainer',
+        open: 'drawerClosed',
+        productArrow: dropdown,
+        showProducts: 'otherProductsHide',
+        productContainer: 'productSelectContainer',
+        showTeamsSettings: 'teamListInSettingsHide'
+      })
     }
     else{
       this.setState({showProfile: 'profileHidden'})
@@ -141,7 +164,15 @@ class Main extends React.Component {
   }
 
   closeAll(){
-    this.setState({showProfile: 'profileHidden', showTeams: 'otherTeamsHide', showProducts: 'otherProductsHide', open: 'drawerClosed', teamArrow: dropdown, productArrow: dropdown, productContainer: 'productSelectContainer', teamContainer: 'teamSelectContainer'})
+    this.setState({showProfile: 'profileHidden', 
+      showTeams: 'otherTeamsHide', 
+      showProducts: 'otherProductsHide', 
+      open: 'drawerClosed', 
+      teamArrow: dropdown, 
+      productArrow: dropdown, 
+      productContainer: 'productSelectContainer', 
+      teamContainer: 'teamSelectContainer'
+    })
   }
 
 	render() {
@@ -168,7 +199,7 @@ class Main extends React.Component {
         handleTeamInSettingsClick={this.handleTeamInSettingsClick}
         showTeamsSettings={this.state.showTeamsSettings}
       />
-			<Drawer open={this.state.open}/>
+			<Drawer open={this.state.open} product={this.state.product}/>
 		</div>	
 	}
 };
